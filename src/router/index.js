@@ -1,7 +1,7 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Contact, Home, Profile, Splash, UserListScreen} from '../screen';
+import {Contact, Home, PostForm, Profile, Splash} from '../screen';
 import {BottomNavigator} from '../components';
 
 const Stack = createNativeStackNavigator();
@@ -11,7 +11,11 @@ const MainApp = () => {
   return (
     <Tab.Navigator tabBar={props => <BottomNavigator {...props} />}>
       <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Contact" component={Contact} />
+      <Tab.Screen
+        name="Contact"
+        component={Contact}
+        options={{headerShown: false}}
+      />
       <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
   );
@@ -30,11 +34,8 @@ const Router = () => {
         component={MainApp}
         options={{headerShown: false}}
       />
-      <Stack.Screen
-        name="UserListScreen"
-        component={UserListScreen}
-        options={{headerShown: false}}
-      />
+
+      <Stack.Screen name="PostForm" component={PostForm} />
     </Stack.Navigator>
   );
 };

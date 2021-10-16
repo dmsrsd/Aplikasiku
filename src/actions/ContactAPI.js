@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {API_GET_ALL_USER, API_TIMEOUT} from '../utils/constant';
+import {API_CONTACT, API_TIMEOUT} from '../utils/constant';
 
 export const GET_CONTACT = 'GET_CONTACT';
 
@@ -17,7 +17,7 @@ export const getContactList = () => {
 
     axios({
       method: 'get',
-      url: API_GET_ALL_USER,
+      url: API_CONTACT,
       timeout: API_TIMEOUT,
     })
       .then(response => {

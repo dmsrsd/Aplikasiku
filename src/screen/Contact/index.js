@@ -9,6 +9,7 @@ import {
   Image,
   Button,
 } from 'react-native';
+import VectorIcon from 'react-native-vector-icons/Ionicons';
 import {connect} from 'react-redux';
 import {getContactList} from '../../actions/ContactAPI';
 import {SearchUser, CardUser} from '../../components/Big/';
@@ -38,20 +39,23 @@ class Contact extends Component {
           keyExtractor={({id}, index) => id}
           renderItem={({item}) => {
             return (
-              <View>
-                <TouchableOpacity style={styles.notificationBox}>
-                  <Image style={styles.image} source={{uri: item.photo}} />
-                  <Text style={styles.nameList}>
-                    First Name : {item.firstName}
-                  </Text>
-                  <Text style={styles.nameList}>
-                    Last Name : {item.lastName}
-                  </Text>
-                  <Text style={styles.nameList}>Age : {item.age}</Text>
-                </TouchableOpacity>
+              <View style={styles.notificationBox}>
+                <Image style={styles.image} source={{uri: item.photo}} />
+                <Text style={styles.nameList}>
+                  First Name : {item.firstName}
+                </Text>
+                <Text style={styles.nameList}>Last Name : {item.lastName}</Text>
+                <Text style={styles.nameList}>Age : {item.age}</Text>
               </View>
             );
           }}
+        />
+        <VectorIcon
+          name="add-circle"
+          size={66}
+          style={{position: 'absolute', bottom: 10, right: 10}}
+          color={'green'}
+          onPress={() => this.props.navigation.navigate('PostForm')}
         />
       </View>
     );
@@ -73,6 +77,7 @@ const styles = StyleSheet.create({
     marginLeft: 6,
     width: 100,
     height: 100,
+    flexDirection: 'row',
   },
   notificationList: {
     marginTop: 20,

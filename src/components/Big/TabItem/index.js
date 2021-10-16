@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   },
   text: isFocused => ({
     fontSize: 14,
-    // color: isFocused ? WARNA_UTAMA : WARNA_DISABLE,
+    color: isFocused ? 'white' : 'grey',
     marginTop: 5,
   }),
 });
