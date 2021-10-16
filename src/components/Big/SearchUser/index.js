@@ -11,7 +11,7 @@ import Feather from 'react-native-vector-icons/Feather';
 
 const width = Dimensions.get('window').width;
 
-const SearchComponent = ({
+const SearchUserComponent = ({
   handleSearchInput,
   handleSort,
   placeholder,
@@ -46,11 +46,11 @@ const SearchComponent = ({
             justifyContent: 'space-between',
             alignItems: 'center',
           }}>
-          <Text style={{color: 'orange', fontSize: 16}}>{sortTitle}</Text>
+          <Text style={{color: 'red', fontSize: 16}}>{sortTitle}</Text>
           <Feather
             name="chevron-down"
             size={26}
-            color="orange"
+            color="red"
             style={{alignSelf: 'center'}}
           />
         </View>
@@ -59,7 +59,7 @@ const SearchComponent = ({
   );
 };
 
-export default SearchComponent;
+export default SearchUserComponent;
 
 const styles = StyleSheet.create({
   container: {
