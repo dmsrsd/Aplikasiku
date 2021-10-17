@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import {TextInput, StyleSheet, View, Button, Alert} from 'react-native';
+import {StyleSheet, View, Button, Alert} from 'react-native';
 import {Input} from '../../components/Small';
 import {ADD_CONTACT, API_CONTACT} from '../../utils/constant';
 
-export class PostForm extends Component {
+export class EditContact extends Component {
   constructor(props) {
     super(props);
 
@@ -23,7 +23,7 @@ export class PostForm extends Component {
     console.log(this.state);
     const {navigation, firstName, lastName, age} = this.props;
     axios
-      .post(API_CONTACT, this.state)
+      .post(ADD_CONTACT, this.state)
       .then(function (response) {
         Alert.alert('Berhasil', 'Berhasil Menambah Data', [
           {
@@ -65,7 +65,7 @@ export class PostForm extends Component {
   }
 }
 
-export default PostForm;
+export default EditContact;
 
 const styles = StyleSheet.create({
   container: {

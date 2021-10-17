@@ -1,19 +1,30 @@
 import React, {Component} from 'react';
-import {Text, StyleSheet, View} from 'react-native';
+import {View} from 'react-native';
+import LottieView from 'lottie-react-native';
 
 export default class Splash extends Component {
-  componentDidMount() {
-    setTimeout(() => {
-      this.props.navigation.navigate('Home');
-    }, 3000);
+  constructor(props) {
+    super();
   }
+
   render() {
     return (
-      <View>
-        <Text> SplashScreen </Text>
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: '#ffffff',
+        }}>
+        <LottieView
+          source={require('../../assets/lottie/12446-share-on-whatsapp.json')}
+          autoPlay
+          loop={false}
+          speed={1}
+          onAnimationFinish={() => {
+            console.log('Animation Finished!');
+            this.props.navigation.replace('MainApp');
+          }}
+        />
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({});
