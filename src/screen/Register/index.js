@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
     color: 'black',
   },
   card: {
-    backgroundColor: 'white',
+    backgroundColor: 'grey',
     marginHorizontal: 30,
     shadowColor: '#000',
     shadowOffset: {

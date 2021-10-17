@@ -158,7 +158,7 @@ export default connect(mapStateToProps, null)(EditProfile);
 const styles = StyleSheet.create({
   pages: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: 'grey',
     paddingHorizontal: 30,
     paddingTop: 10,
   },
