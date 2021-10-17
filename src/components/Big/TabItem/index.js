@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   },
   text: isFocused => ({
     fontSize: 14,
-    color: isFocused ? 'white' : 'grey',
+    color: isFocused ? '#FFFFFF' : 'grey',
     marginTop: 5,
   }),
 });

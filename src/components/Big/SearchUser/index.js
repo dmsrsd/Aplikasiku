@@ -28,7 +28,7 @@ const SearchUserComponent = ({
       <TextInput
         placeholder={placeholder}
         style={styles.search}
-        onChangeText={text => handleSearchInput(text)}
+        // onChangeText={text => handleSearchInput(text)}
       />
       <TouchableOpacity
         style={{
@@ -50,7 +50,7 @@ const SearchUserComponent = ({
           <Feather
             name="chevron-down"
             size={26}
-            color="red"
+            color="#E93B81"
             style={{alignSelf: 'center'}}
           />
         </View>
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     height: 64,
     width: width - 20,
     borderColor: '#aaa',
-    borderRadius: 4,
+    borderRadius: 30,
     backgroundColor: '#fff',
     margin: 10,
   },
